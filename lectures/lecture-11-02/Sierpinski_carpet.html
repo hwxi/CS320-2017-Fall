@@ -1,0 +1,62 @@
+<!doctype html>
+<html>
+  <head>
+    <title>SierpinskiCarpet</title>
+    <link rel="stylesheet"
+     href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <style>
+      #canvas-container
+      {
+      margin: 0 auto; width: auto; height: auto;
+      }
+    </style>
+    <script
+     src="https://cdn.jsdelivr.net/jquery/2.1.1/jquery.min.js">
+    </script>
+    <script
+     src="https://cdnjs.cloudflare.com/ajax/libs/bacon.js/0.7.53/Bacon.min.js">
+    </script>
+    <script
+     src="https://ats-lang.github.io/LIBRARY/libatscc2js/ATS2-0.3.2/libatscc2js_all.js">
+    </script>
+    <script
+     src="https://ats-lang.github.io/LIBRARY/libatscc2js/ATS2-0.3.2/libatscc2js_baconjs_all.js">
+    </script>
+  </head>
+  <body>
+    <center>
+    <h1>Sierpinski Carpet</h1>
+    </center>
+    <hr></hr>
+    <center>
+      <table>
+      <tr>
+      <td>
+      <button
+       id="thePrev_btn"
+       type="button" class="btn btn-primary btn-lg">Prev</button>
+      </td>
+      <td>
+      <div id="canvas-container">
+	<canvas
+	   id="theCanvas"
+	   width="880px" height="570px"
+	   oncontextmenu="event.preventDefault()">
+	  It seems that canvas is not supported by your browser!
+	</canvas>
+      </div>
+      </td>
+      <td>
+      <button
+       id="theNext_btn"
+       type="button" class="btn btn-primary btn-lg">Next</button>
+      </td>
+      </tr>
+      <table>
+    </center>
+    <!--
+HX-2014-11: it must be the last one!
+     -->
+    <script src="./Sierpinski_carpet_dats.js"></script>
+  </body>
+</html>

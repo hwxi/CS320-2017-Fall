@@ -1,0 +1,56 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Counter</title>
+    <link rel="stylesheet"
+     href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <style>
+      #canvas-container
+      {
+      margin: 0 auto; width: auto; height: auto;
+      }
+    </style>
+    <script
+     src="https://cdn.jsdelivr.net/jquery/2.1.1/jquery.min.js">
+    </script>
+    <script
+     src="https://cdnjs.cloudflare.com/ajax/libs/bacon.js/0.7.53/Bacon.min.js">
+    </script>
+    <script
+     src="https://ats-lang.github.io/LIBRARY/libatscc2js/ATS2-0.3.2/libatscc2js_all.js">
+    </script>
+    <script
+     src="https://ats-lang.github.io/LIBRARY/libatscc2js/ATS2-0.3.2/libatscc2js_baconjs_all.js">
+    </script>
+  </head>
+  <body>
+    <center>
+    <h1>Counter</h1>
+    </center>
+    <hr></hr>
+    <center>
+      <p id="theCount2_p" class="h1">00</p>
+      <table>
+      <tr>
+      <td width="33%">
+      <button
+       id="theUp_btn" type="button"
+       style="width:96%" class="btn btn-primary btn-lg">Up</button>
+      </td>
+      <td width="34%">
+      <button
+       id="theDown_btn" type="button"
+       style="width:96%" class="btn btn-primary btn-lg">Down</button>
+      </td>
+      <td width="33%">
+      <button
+       id="theReset_btn" type="button"
+       style="width:96%" class="btn btn-primary btn-lg">Reset</button>
+      </td>
+      </tr>
+      <table>
+    </center>
+    <hr></hr>
+    <script src="./theCounter2_baconjs_dats.js"></script>
+  </body>
+</html>

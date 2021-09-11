@@ -1,0 +1,98 @@
+################################################
+//
+// CS320: Quiz-2017-12-12
+//
+################################################
+
+Name:
+
+------------------------------------------------
+
+BUID:
+
+------------------------------------------------
+
+Score:
+
+------------------------------------------------
+
+################################################
+
+Question 1: 10 Points
+
+Let us define a function foo as follows:
+//
+fun
+foo(xs: list0(int)): list0(int) =
+(
+case+ xs of
+| list0_nil() => list0_nil()
+| list0_cons(x, xs) => foo(foo(foo(xs)))
+)
+//
+What is the time-complexity of foo
+in terms of the length of its argument (which is a list)?
+//
+[choice(1)]: O(n)
+[choice(2)]: O(n^2)
+[choice(3)]: O(n^3)
+[choice(4)]: O(3^n)
+[choice(5)]: None of the above
+//
+################################################
+
+Question 2: 10 Points
+
+The following function sublist tests whether xs contains
+ys as a subsequence:
+//
+fun
+sublist
+(
+  xs: list0(int), ys: list0(int)
+) : bool =
+(
+case+ (xs, ys) of
+| (_, list0_nil()) => true
+| (list0_nil(), _) => false
+| (cons0(x, xs2), cons0(y, ys2)) =>
+    sublist(xs2, if x = y then ys2 else ys)
+)
+//
+Assume that m is the length of xs
+and n is the length of ys. Which of the following statement is
+the most accurate one:
+
+[choice(1)]: sublist is O(m)-time
+[choice(2)]: sublist is O(n)-time
+[choice(3)]: sublist is O(m+n)-time
+[choice(4)]: sublist is O(max(m,n))-time
+[choice(5)]: None of the above
+
+################################################
+
+Question 3: 10 Points
+
+A function named myreverse is implemented as follows:
+//
+fun
+myreverse(xs) = 
+(
+  case+ xs of
+  | nil0 () => nil0()
+  | cons0 (x, xs) => list0_append(myreverse(xs), cons0(x, nil0()))
+)
+//
+Assume that xs is of length n
+and list0_append is given the standard
+implementation.
+
+What is the time complexity of myreverse?
+
+[choice(1)]: O(n)
+[choice(2)]: O(n*log(n))
+[choice(3)]: O(n^2)
+[choice(4)]: O(2^n)
+[choice(5)]: None of the above
+
+################################################

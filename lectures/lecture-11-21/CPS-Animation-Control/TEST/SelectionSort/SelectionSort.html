@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<title>SelectionSort</title>    
+
+<style>
+#theStage
+{
+width: 80%;
+margin: 0 auto;
+text-align: center;
+}
+#canvas-container
+{
+  margin: 0 auto; width: 600px; height: 480px;
+}
+</style>
+
+<script
+ src="https://cdn.jsdelivr.net/jquery/2.1.1/jquery.min.js">
+</script>
+<script
+ src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.1/Chart.min.js">
+</script>
+<script
+  src="https://ats-lang.github.io/LIBRARY/libatscc2js/ATS2-0.3.2/libatscc2js_all.js">
+</script>
+<script
+  src="https://ats-lang.github.io/LIBRARY/libatscc2js/ATS2-0.3.2/libatscc2js_print_store_cats.js">
+</script>
+  
+</head>
+
+<body>
+
+  <h1>Selection Sort</h1>
+
+  <h2>Game Parameters</h2>
+  <ul>
+    <li>
+      The intmax:<input style="text-align:right" type="text" id="param_intmax" value="10" size=1 maxlength=2>
+    </li>
+    <li>
+      The array size:<input style="text-align:right" type="text" id="param_asize" value="10" size=1 maxlength=2>
+    </li>
+    <li>
+      The delay length:<input style="text-align:right" type="text" id="param_ndelay" value="1000" size=3 maxlength=4>
+    </li>
+  </ul>
+
+  <h2>Control for the Game</h2>
+  <ul>
+    <li>
+      <button id="theStartButton"
+       type="button" onclick="theStartButton_action()">Start</button>
+    </li>
+    <li>
+      <button id="theResetButton"
+       type="button" onclick="theResetButton_action()">Reset</button>
+    </li>
+    <li>
+      <button id="thePauseButton"
+       type="button" onclick="thePauseButton_action()">Pause</button>
+    </li>
+    <li>
+      <button id="theStep1Button"
+       type="button" onclick="theStep1Button_action()">Step1</button>
+    </li>
+    <li>
+      <button id="theResumeButton"
+       type="button" onclick="theResumeButton_action()">Resume</button>
+    </li>
+  </ul>
+
+  <h2>Display for the Game</h2>
+<!--
+  <pre id="theStage">
+    This is the stage for displaying the solutions
+  </pre>
+-->
+
+  <div id="canvas-container">
+    <canvas id="theStage"></canvas>
+  </div>
+
+  <script
+   src="./../../CPS-Animation-Control_dats.js"
+  ></script>
+  <script src="./SelectionSort_dats.js"></script>
+
+</body>
+
+</html>

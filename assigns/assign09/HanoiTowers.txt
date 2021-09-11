@@ -1,0 +1,18 @@
+######
+#
+# HX: 10 points
+# Hacking for a bit of fun.
+#
+######
+
+A demo of the Hanoi Towers puzzle can be seen at the
+following link:
+
+https://ats-lang.github.io/DOCUMENT/ATS2FUNCRASH/LECTURE/12-10/CODE/HanoiTowers.html
+
+The control buttons are implemented in the standard callback
+style. Please do some hacking to re-implement these buttons by
+making use of event streams supported by Bacon.js.
+
+Please feel free to make any changes to the given files as you
+see fit. There is a Makefile for you to build the needed JS code.

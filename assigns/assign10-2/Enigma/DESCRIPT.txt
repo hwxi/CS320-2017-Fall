@@ -1,0 +1,61 @@
+######
+#
+# Assignment 10-2
+# Total: 40 points
+# Due: Tuesday, the 12th of December
+#
+# BU CAS CS320, Fall, 2017
+#
+# There are up to 20 points
+# for an implementation that compiles
+# to JS to be run insider a web browser
+#
+######
+
+This assignment asks you to give an implementation of the Enigma
+machine.
+
+You can implement either the Army version (3 rotors) or the Navy version
+(5 rotors).
+
+Try to use the provided Makefile to compile the code and see what it does.
+
+This assignment is worth 50 points in total.
+
+######
+#
+# A short note on Enigma
+#
+######
+
+This is the fundamental mapping behind Enigma:
+
+x -> p^(R^(f(R(p(x)))))
+
+p (plugboard) is the inverse of itself
+f (reflector) is the inverse of itself
+R (rotor sequence) may not be the inverse of itself
+
+p^ is the inverse of p, which equals p
+R^ is the inverse of R, which may not equal R
+
+Let r0 be a rotor.
+
+Let r1 be r0 with its shift set to S. Then we have
+
+r1(x) = r0(x) + S
+r1^(x) = r0^(x - S)
+
+where r0^ and r1^ are the inverse mappings of r0 and r1,
+respectively.
+
+######
+#
+# Here is a good site for Enigma machines:
+#
+######
+
+http://enigma.louisedade.co.uk/
+http://enigma.louisedade.co.uk/howitworks.html
+
+###### end of [DESCRIPT.txt] ######

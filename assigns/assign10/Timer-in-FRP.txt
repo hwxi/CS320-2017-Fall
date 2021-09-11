@@ -1,0 +1,55 @@
+######
+//
+// Title:
+// Concepts of
+// Programming Languages
+// Course: CAS CS 320
+//
+// Semester: Fall, 2017
+//
+// Classroom: COM 101
+// Class Time: TR 12:30-1:45
+//
+// Instructor:
+// Hongwei Xi (hwxiATcsDOTbuDOTedu)
+//
+######
+//
+// Due date: Tuesday, the 28th of November
+//
+######
+
+HX: 20 points
+
+######
+
+Take a look at any timer app (e.g., the one
+on your cell phone). Then try to implement a
+timer of the following functionalities:
+
+######
+
+Field hour // optional
+Field minute: for inputing number of minutes
+Field second: for inputing number of seconds
+
+######
+
+Button Start: start the timer (to count down)
+Button Reset: reset the timer (to the initial state)
+Button Pause: pause the timer
+Button Resume: resume the timer
+
+These buttons should be implemented based on PURE FRP.
+ABSOLUTELY NO USE OF IMPERATIVE FEATURES LIKE REFERENCES.
+
+######
+
+When the timer reaches zero, an alert message should be
+triggered.
+
+######
+
+PS: Possible bonus points for a creative design/implementation
+
+######

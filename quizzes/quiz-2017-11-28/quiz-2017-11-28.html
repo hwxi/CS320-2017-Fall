@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<style>
+#theOutput
+{
+width: 80%;
+margin: 0 auto;
+/*
+text-align: center;
+*/
+font-size: 150%;
+}
+</style>
+
+</head>
+
+<body id="theOutput">
+
+<center>
+<h1>CS320: Quiz-2017-11-28</h1>
+</center>
+
+<ul>
+
+<li>
+Question 1 (10 points)
+<div>
+Let us define the following function <em>f</em>:
+
+<pre style="font-weight:bold">
+//
+fun f(x: int): int = f(2*x + 1)
+//
+</pre>
+
+What happens if we evaluate the expression <em>f(0)</em>
+in ATS? Please choose the one that is the most accurate:
+
+<ul>
+<li>choice(1): It returns 0</li>
+<li>choice(2): It returns 1</li>
+<li>choice(3): It loops forever</li>
+<li>choice(4): It exceeds a fixed maximum recursion depth and then crashes</li>
+<li>choice(5): None of the above</li>
+</ul>
+</div>
+</li>
+
+<hr></hr>
+
+<li>
+Question 2 (10 points)
+<div>
+Let us define kf and kf0 as follows:
+
+<pre style="font-weight:bold">
+//
+typedef intcont = (int) -<cloref1> int
+//
+fun kf(n: int, k1: intcont, k2: intcont): int =
+  if n = 0
+    then k2(0) else kf(n-1, k2, lam(res) => k1(n+res))
+  // end of [if]
+and kf0(n: int): int = kf(n, lam res => res, lam res => res)
+</pre>
+
+Note that kf is written in the continuation-passing style.
+What is the value of <em>kf0(10)</em>?
+
+<ul>
+<li>choice(1): 10</li>
+<li>choice(2): 25</li>
+<li>choice(3): 30</li>
+<li>choice(4): 55</li>
+<li>choice(5): None of the above</li>
+</ul>
+</div>
+</li>
+
+<hr></hr>
+
+<li>
+Question 3 (10 points)
+<div>
+Let us define a stream <em>MYSTREAM</em> as follows.
+
+<pre style="font-weight:bold">
+//
+val
+MYSTREAM =
+fstream(0) where
+{
+  fun fstream(n: int): stream(int) =
+    $delay(stream_cons(n, stream_map(fstream(n+1), lam(x) => x+x+1)))
+}
+//
+</pre>      
+
+Which of the following is the 5th elemenet of MYSTREAM?
+<ul>
+<li>choice(1): 11</li>
+<li>choice(2): 31</li>
+<li>choice(3): 55</li>
+<li>choice(4): 75</li>
+<li>choice(5): None of the above</li>
+</ul>
+</div>
+</li>
+
+<hr></hr>
+
+<li>
+Question 4 (10 points)
+<div>
+Let us define the following function <em>f</em>:
+
+<pre style="font-weight:bold">
+//
+fun f(n: int): int = if n = 0 then 0 else 10*f(n/2) + n%2
+//
+</pre>
+
+What is the value of <em>f(1023)</em>?
+
+<ul>
+<li>choice(1): 111</li>
+<li>choice(2): 11111</li>
+<li>choice(3): 1111111</li>
+<li>choice(4): 111111111</li>
+<li>choice(5): None of the above</li>
+</ul>
+</div>
+</li>
+
+<hr></hr>
+
+</ul>
+
+</body>
+
+</html>

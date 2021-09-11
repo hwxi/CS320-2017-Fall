@@ -1,0 +1,54 @@
+######
+//
+// Title:
+// Concepts of
+// Programming Languages
+// Course: CAS CS 320
+//
+// Semester: Fall, 2017
+//
+// Classroom: COM 101
+// Class Time: TR 12:30-1:45
+//
+// Instructor:
+// Hongwei Xi (hwxiATcsDOTbuDOTedu)
+//
+######
+//
+// Due date: Tuesday, the 28th of November
+//
+######
+#
+# Assignment 6
+#
+# Due: the last day of class (June, 29, 2017)
+#
+######
+#
+# Wormlike: 20 points in total
+#
+# This Assignment is due Thursday, the 20th of April
+#
+# ######
+#
+# Scene 1:
+#
+# 5 points for a scene that consists of the last digit
+# X of your BU ID number and 9-X (drawn with gray dots) and
+# 50 prizes (drawn with red dots randomly positioned)
+#
+# Scene 2:
+#
+# 5 points for a scene that consists of your initials
+# (two letters) in capital case (drawn with gray dots)
+# and 50 prizes (drawn with red dots randomly positioned)
+#
+# Search:
+#
+# 10 points for implementing an automatic search for prizes. The
+# algorithm for the search should be based on breadth-first graph
+# search.
+#
+######
+
+###### end of [README.txt] ######

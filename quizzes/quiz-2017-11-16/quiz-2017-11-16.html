@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<style>
+#theOutput
+{
+width: 80%;
+margin: 0 auto;
+/*
+text-align: center;
+*/
+font-size: 150%;
+}
+</style>
+
+</head>
+
+<body id="theOutput">
+
+<center>
+<h1>CS320: Quiz-2017-11-16</h1>
+</center>
+
+<ul>
+
+<li>
+Question 1 (10 points)
+<div>
+Let us define kf and kf0 as follows:
+
+<pre style="font-weight:bold">
+//
+typedef intcont = (int) -<cloref1> int
+//
+fun kf(n: int, k0: intcont): int =
+  if n = 0 then k0(k0(0)) else kf(n-1, lam(res) => k0(n-res))
+and kf0(n: int): int = kf(n, lam res => res)
+</pre>
+
+Note that kf is written in the continuation-passing style.
+What is the value of <em>kf0(10)</em>?
+
+<ul>
+<li>choice(1): 0</li>
+<li>choice(2): 10</li>
+<li>choice(3): 20</li>
+<li>choice(4): -10</li>
+<li>choice(5): None of the above</li>
+</ul>
+</div>
+</li>
+
+<hr></hr>
+
+<li>
+Question 2 (10 points)
+<div>
+Let us define kf and kf0 as follows:
+
+<pre style="font-weight:bold">
+//
+typedef intcont = (int) -<cloref1> int
+//
+fun kf(n: int, k1: intcont, k2: intcont): int =
+  if n = 0
+    then k1(k2(0)) else kf(n-1, k2, lam(res) => k1(n+res))
+  // end of [if]
+and kf0(n: int): int = kf(n, lam res => res, lam res => res)
+</pre>
+
+Note that kf is written in the continuation-passing style.
+What is the value of <em>kf0(10)</em>?
+
+<ul>
+<li>choice(1): 10</li>
+<li>choice(2): 25</li>
+<li>choice(3): 30</li>
+<li>choice(4): 55</li>
+<li>choice(5): None of the above</li>
+</ul>
+</div>
+</li>
+
+<hr></hr>
+
+<li>
+Question 3 (10 points)
+<div>
+Let us define the following function <em>tricky</em>:
+
+<pre style="font-weight:bold">
+//
+val
+global = ref<int>(0)
+//
+val
+tricky = let
+//
+fun f
+(
+ i: int
+) : int = let
+  val () = !global := !global + i
+in
+  if i > 0 then f(i-1) else !global
+end (* end of [f] *)
+//
+in
+  lam (i:int): int =<cloref1> f(i)
+end // end of [tricky]
+//
+</pre>      
+
+What is the value of <em>tricky(10)</em>?
+<ul>
+<li>choice(1): 0
+<li>choice(2): 1
+<li>choice(3): 10
+<li>choice(4): 45
+<li>choice(5): None of the above</li>
+</ul>
+</div>
+</li>
+
+<hr></hr>
+
+<li>
+Question 4 (10 points)
+<div>
+Let us define the following function <em>tricky</em>:
+
+<pre style="font-weight:bold">
+fun
+reset
+(
+ r: ref(int)
+) : int = let val i = !r in !r := 0; i end
+
+val
+tricky = let
+//
+fun f
+(
+ r: ref(int), i: int
+) : int = let
+  val () = !r := !r + 1
+in
+  if(i < 2)
+  then reset(r) else f(r, i-2) + f(r, i-1)
+end (* end of [f] *)
+//
+val r = ref<int> (0)
+//
+in
+  lam (i:int): int =<cloref1> f(r, i)
+end // end of [tricky]
+</pre>
+
+What is the value of the expression <em>tricky(5)</em>?
+
+<ul>
+<li>choice(1): 11</li>
+<li>choice(2): 13</li>
+<li>choice(3): 15</li>
+<li>choice(4): 17</li>
+<li>choice(5): None of the above</li>
+</ul>
+</div>
+</li>
+
+</ul>
+
+</body>
+
+</html>

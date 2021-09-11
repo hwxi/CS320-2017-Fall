@@ -1,0 +1,45 @@
+################################################
+[name]: \
+Q506-2017-05-06
+[description]:
+Let us define a function named $ghaap$ as follows:
+\##dyncode("\
+fun ghaap
+(
+  m: int, res: int
+) : int =
+(
+  if m > 0 then ghaap (m-1, m*res) else res
+) // end of [ghaap]\
+")
+What is the value of the expression $ghaap(5, 5)$?
+[points]: 10
+[choice(1)]: 100
+[choice(2)]: 200
+[choice(3)]: 300
+[choice(4)]: 600
+[choice(5)]: None of the above
+################################################
+
+[name]: \
+Q507-2017-05-06
+[description]:
+Let us define a function named $gheep$
+as follows:
+\##dyncode("\
+fun gheep
+(
+  m: int, f: int -> int, res: int
+) : int =
+(
+  if m > 0 then gheep (m-1, f, f(res)) else res
+) // end of [gheep]\
+")
+What is the value of the expression $gheep(4, lam(x) => x * x, 2)$?
+[points]: 10
+[choice(1)]: $2^{4}$
+[choice(2)]: $2^{8}$
+[choice(3)]: $2^{12}$
+[choice(4)]: $2^{16}$
+[choice(5)]: None of the above
+################################################

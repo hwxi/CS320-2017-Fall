@@ -1,0 +1,42 @@
+######
+//
+// Title:
+// Concepts of
+// Programming Languages
+// Course: CAS CS 320
+//
+// Semester: Fall, 2017
+//
+// Classroom: COM 101
+// Class Time: TR 12:30-1:45
+//
+// Instructor:
+// Hongwei Xi (hwxiATcsDOTbuDOTedu)
+//
+######
+//
+// Due date: Tuesday, the 28th of November
+//
+######
+
+HX: 5 points (Just a warm-up)
+
+######
+
+Please implement a clock, digital or analogue in FRP-style.
+Try to use the Bacon.fromPoll function to update the display
+every 500ms (one-half second).
+
+######
+
+Here are some examples of clocks:
+
+http://ats-lang.sourceforge.net/COMPILED/doc/PROJECT/SMALL/JSclock/myclock0.html
+http://ats-lang.sourceforge.net/COMPILED/doc/PROJECT/SMALL/JSclock/myclock1.html
+http://ats-lang.sourceforge.net/COMPILED/doc/PROJECT/SMALL/JSclock/myclock2.html
+
+######
+
+PS: Possible bonus points for a creative design/implementation
+
+######

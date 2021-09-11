@@ -1,0 +1,24 @@
+######
+#
+# HX: 20 points
+# Hacking for a bit of fun.
+#
+######
+
+If you have not seen the 'Eyes' game, you can readily
+find it on-line. For instance, here is a simple demo:
+
+http://www.cs.bu.edu/~hwxi/academic/courses/CS320/Fall17/.xshare/cs320-2017-fall/assigns/assign09/Solution/Eyes/Eyes.html
+
+What is required of you in this problem is to implement
+a simplistic version of the game:
+
+Each pupil should always move to the
+position inside the eye containing it that is closest to
+the current mouse pointer.
+
+There may be bonus points for creativity of all sorts :)
+
+###### end of [Eyes.txt] ######
+
+

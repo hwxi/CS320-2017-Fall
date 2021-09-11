@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<style>
+#theOutput
+{
+width: 80%;
+margin: 0 auto;
+/*
+text-align: center;
+*/
+font-size: 150%;
+}
+</style>
+
+</head>
+
+<body id="theOutput">
+
+<center>
+<h1>CS320: Quiz-2017-11-02</h1>
+</center>
+
+<ul>
+
+<li>
+Question 1 (10 points)
+<div>
+Please read the following code:
+<pre style="font-weight:bold">
+val theX = 1
+fun foo(x: int): int =
+let
+  val theX = theX + 1 in theX + x
+end
+</pre>
+What is the value obtained from evaluating the expression
+<em>foo(0)+foo(1)</em> in ATS?
+<ul>
+<li>choice(1): 3</li>
+<li>choice(2): 4</li>
+<li>choice(3): 5</li>
+<li>choice(4): 6</li>
+<li>choice(5): None of the above</li>
+</ul>
+</div>
+</li>
+
+<hr></hr>
+
+<li>
+Question 2 (10 points)
+<div>
+Please read the following code:
+<pre style="font-weight:bold">
+val theX = ref<int>(1)
+fun foo(x: int): int =
+let
+  val () = !theX := !theX + 1 in !theX + x
+end
+</pre>
+What is the value obtained from evaluating the expression
+<em>foo(0)+foo(1)</em> in ATS?
+<ul>
+<li>choice(1): 3</li>
+<li>choice(2): 4</li>
+<li>choice(3): 5</li>
+<li>choice(4): 6</li>
+<li>choice(5): None of the above</li>
+</ul>
+</div>
+</li>
+
+<hr></hr>
+
+<li>
+Question 3 (10 points)
+<div>
+Please read the following code:
+<pre style="font-weight:bold">
+fun
+foo(n: int, s: int): int =
+if n = 1 then s else
+  (if n % 2 = 0 then foo(n/2, s+1) else foo(3*n+1, s+1))
+</pre>
+What is the value of <em>foo(10, 0)</em>?
+<ul>
+<li>choice(1): 5
+<li>choice(2): 6
+<li>choice(3): 7
+<li>choice(4): 8
+<li>choice(5): None of the above</li>
+</ul>
+</div>
+</li>
+
+<hr></hr>
+
+<li>
+Question 4 (10 points)
+<div>
+Let us define a stream <em>MYSTREAM</em> as follows:
+<pre style="font-weight:bold">
+val
+MYSTREAM =
+fstream() where
+{
+//
+fun
+fstream
+(
+// argless
+) : stream(int) =
+$delay(stream_cons(1, stream_map(fstream(), lam(x) => x*x+1)))
+//
+} (* end of [val] *)
+</pre>
+Which of the following correctly lists the first 4 elemenets of <em>MYSTREAM</em>?
+<ul>
+<li>choice(1): (1, 2, 3, 4, ...)</li>
+<li>choice(2): (1, 2, 4, 8, ...)</li>
+<li>choice(3): (1, 2, 3, 7, ...)</li>
+<li>choice(4): (1, 2, 5, 11, ...)</li>
+<li>choice(5): None of the above</li>
+</ul>
+</div>
+</li>
+
+</ul>
+
+</body>
+
+</html>

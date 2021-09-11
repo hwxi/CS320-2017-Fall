@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<style>
+#theOutput
+{
+width: 80%;
+margin: 0 auto;
+text-align: center;
+}
+</style>
+
+<script type="text/javascript"
+ src="https://cdn.jsdelivr.net/jquery/2.1.1/jquery.min.js">
+</script>
+<script type="text/javascript"
+ src="https://ats-lang.github.io/LIBRARY/libatscc2js/ATS2-0.3.2/libatscc2js_all.js">
+</script>
+<script type="text/javascript"
+  src="https://ats-lang.github.io/LIBRARY/libatscc2js/ATS2-0.3.2/libatscc2js_print_store_cats.js">
+</script>
+  
+</head>
+
+<body>
+
+  <center>
+    <h1>Assignment #01</h1>
+  </center>
+
+  <hr></hr>
+
+  <h1>intsqrt</h1>
+  <h2>Function Argument(s)</h2>
+  <ul>
+    <li>
+      funarg1:
+      <input
+       type="text"
+       style="text-align:right"
+       id="intsqrt_funarg1" value="1000" size=8 maxlength=8>
+    </li>
+  </ul>
+  <h2>Control for Evaluation</h2>
+  <ul>
+    <li>
+      <button id="button_intsqrt"
+       type="button" onclick="assign01_intsqrt_js()">Evaluate</button>
+    </li>
+  </ul>
+  <h2>Display for Evaluation</h2>
+  <pre id="theOutput">
+    This is the area for displaying the output
+  </pre>
+  
+  <hr></hr>
+
+  <script type="text/javascript" src="./assign01_sol.js"></script>
+
+</body>
+
+</html>

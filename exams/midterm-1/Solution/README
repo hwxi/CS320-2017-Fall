@@ -1,0 +1,36 @@
+######
+#
+# Questions in GROUP 1
+#
+######
+  
+list0_sieve: 5 points
+
+list0_average: 5 points
+
+list0_get_at_opt: 5 points
+
+(
+multable_10: 5 points
+OR
+multable_base: 10 points
+)
+
+abs_intrep: 10 points
+add_intrep_intrep: 10 points
+
+expr_compile: 5 points
+expr_simplify: 5 points
+equal_expr_expr: 10 points
+
+######
+#
+# Questions in GROUP 2
+#
+######
+
+list2mytrees: 10 points
+list0_submaxord: 10 points
+mylist_foldleft: 10 points
+
+###### end of [README] ######

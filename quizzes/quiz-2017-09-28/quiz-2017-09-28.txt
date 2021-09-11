@@ -1,0 +1,30 @@
+################################################
+[name]: \
+Q501-2017-05-06
+[description]:
+What is the value of the following expression:
+\##dyncode("\
+foldleft($list(1, 4, 9, 16, 25), 0, lam(x, y) => (x - y))\
+")
+[points]: 10
+[choice(1)]: 15
+[choice(2)]: -15
+[choice(3)]: 55
+[choice(4)]: -55
+[choice(5)]: None of the above
+################################################
+
+[name]: \
+Q502-2017-05-06
+[description]:
+What is the value of the following expression:
+\##dyncode("\
+foldleft($list(1, 4, 9, 16, 25), 0, lam(x, y) => (y - x))\
+")
+[points]: 10
+[choice(1)]: 15
+[choice(2)]: -15
+[choice(3)]: 55
+[choice(4)]: -55
+[choice(5)]: None of the above
+################################################

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Timer</title>    
+  <script
+    src="https://cdn.jsdelivr.net/jquery/2.1.1/jquery.min.js">
+  </script>
+  <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/bacon.js/0.7.53/Bacon.min.js">
+  </script>
+  <script
+    src="https://ats-lang.github.io/LIBRARY/libatscc2js/ATS2-0.3.2/libatscc2js_all.js">
+  </script>
+  <script
+    src="https://ats-lang.github.io/LIBRARY/libatscc2js/ATS2-0.3.2/libatscc2js_baconjs_all.js">
+  </script>
+  <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+  <link rel="stylesheet" href="./Timer.css">
+</head>
+<body>
+  <div class="wrapper">
+   <div class="card">
+     <div class="header">
+       <div style="margin:20px;padding:15px">Timer</div>
+     </div>
+     <div id="main">
+      <table class="selectionTable">
+        <tr>
+          <td>
+	    <select id="selectMinute" class="selections" size="60"></select>
+	  </td>
+	  <td>min</td>
+          <td >
+	    <select id="selectSecond" class="selections" size="60"></select>
+	  </td>
+          <td>sec</td>
+	</tr>
+      </table>
+     </div>
+      <table id="tbl">
+        <tr>
+        <td id="theMinutes" class="num">10</td>
+        <td id="col">:</td>
+        <td id="theSeconds" class="num">00</td>
+      </tr>
+      </table>
+	  <button class="btn" id="button_reset" type="button">Reset</button>
+	  <button class="btn" id="button_pause" type="button">Pause</button>
+	  <button class="btn" id="button_resume" type="button">Resume</button>
+	  <button class="btn" id="button_start" type="button">Start</button>
+      </div>
+   </div>
+</div>
+<script src="./Timer_dats.js"></script>
+</body>
+</html>
