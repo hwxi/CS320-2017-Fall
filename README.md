@@ -1,1 +1,3 @@
-# CS320-2017-Fall
+# README #
+
+For teaching CS320, Fall 2017.
